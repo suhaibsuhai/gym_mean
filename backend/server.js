@@ -21,12 +21,16 @@ app.use('/api/userroute', userRoutes);
 app.use('/api/workouts', workoutRoutes); // Fixed route path by adding a leading '/'
 
 // Serve static files from the React app
-app.use(express.static(path.join(__dirname, "frontend", "build")));
-app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "frontend", "build", "index.html")); // Corrected to sendFile
-});
+if (process.env.NODE_ENV === 'production') {
+  // In production, serve the frontend React app
+  app.use(express.static(path.join(__dirname, 'frontend', 'build')));
+
+  app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html')); // Corrected to sendFile
+  });
+}
 
 // Start server
 app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
+  console.log(`Server is running on port ${PORT}`);
 });
