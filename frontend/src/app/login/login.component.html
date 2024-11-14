@@ -1,0 +1,28 @@
+<div class="login-container">
+  <div class="login-form">
+    <h2>Login</h2>
+    <!-- Angular form submission -->
+    <form (ngSubmit)="login()">
+      <!-- Email Input Group -->
+      <div class="input-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" [(ngModel)]="user.email" name="email" required placeholder="Enter your email">
+      </div>
+      
+      <!-- Password Input Group -->
+      <div class="input-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" [(ngModel)]="user.password" name="password" required placeholder="Enter your password">
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit" class="login-button">Login</button>
+    </form>
+    
+    <!-- Message Display (e.g., login errors) -->
+    <p class="message">{{ message }}</p>
+
+    <!-- Footer Link to Registration Page -->
+    <p class="footer-link">Don't have an account? <a href="/register">Sign Up</a></p>
+  </div>
+</div>

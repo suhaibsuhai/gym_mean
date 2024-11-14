@@ -1,0 +1,71 @@
+<div class="container">
+    <h2>Workout Manager</h2>
+  
+    <!-- Form to add or edit workout -->
+    <form *ngIf="editMode; else addWorkoutForm" (ngSubmit)="updateWorkout()">
+      <h3>Edit Workout</h3>
+      <!-- Input fields arranged in a row -->
+      <input type="date" [(ngModel)]="newWorkout.date" name="date" placeholder="Date" required />
+      <input type="text" [(ngModel)]="newWorkout.time" name="time" placeholder="Time" required />
+      <input type="text" [(ngModel)]="newWorkout.name" name="name" placeholder="Workout Name" required />
+      <input type="number" [(ngModel)]="newWorkout.count" name="count" placeholder="Count" required />
+      <textarea [(ngModel)]="newWorkout.comments" name="comments" placeholder="Comments"></textarea>
+  
+      <button type="submit">Update Workout</button>
+      <button type="button" (click)="cancelEdit()">Cancel</button>
+    </form>
+  
+    <ng-template #addWorkoutForm>
+      <h3>Add New Workout</h3>
+      <form (ngSubmit)="addWorkout()">
+        <!-- Input fields arranged in a row -->
+        <input type="date" [(ngModel)]="newWorkout.date" name="date" placeholder="Date" required />
+        <input type="text" [(ngModel)]="newWorkout.time" name="time" placeholder="Time" required />
+        <input type="text" [(ngModel)]="newWorkout.name" name="name" placeholder="Workout Name" required />
+        <input type="number" [(ngModel)]="newWorkout.count" name="count" placeholder="Count" required />
+        <textarea [(ngModel)]="newWorkout.comments" name="comments" placeholder="Comments"></textarea>
+        <button type="submit">Add Workout</button>
+      </form>
+    </ng-template>
+  
+    <h3>Workout List</h3>
+  
+    <!-- Search and Sort options -->
+    <div class="search-sort">
+      <input type="text" [(ngModel)]="searchText" placeholder="Search by workout name" />
+      <button (click)="searchWorkouts()">Search</button>
+  
+      <label for="sortBy">Sort By:</label>
+      <select id="sortBy" [(ngModel)]="sortCriteria" (change)="sortWorkouts()">
+        <option value="date">Date</option>
+        <option value="count">Count</option>
+      </select>
+    </div>
+  
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Time</th>
+          <th>Workout Name</th>
+          <th>Count</th>
+          <th>Comments</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let workout of filteredWorkouts">
+          <td>{{ workout.date | date: 'yyyy-MM-dd' }}</td>
+          <td>{{ workout.time }}</td>
+          <td>{{ workout.name }}</td>
+          <td>{{ workout.count }} reps</td>
+          <td>{{ workout.comments }}</td>
+          <td>
+            <button (click)="editWorkout(workout)">Edit</button>
+            <button (click)="deleteWorkout(workout._id)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

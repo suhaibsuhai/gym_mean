@@ -1,0 +1,97 @@
+/* Contact Us Section */
+.contact-us-section {
+    background-color: #151515;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.contact-us-section .section-title {
+    margin-bottom: 45px;
+    text-align: center;
+}
+
+.contact-us-section .section-title span {
+    font-size: 16px;
+    color: #f36100;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.contact-us-section .section-title h2 {
+    color: #ffffff;
+    font-size: 32px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 8px;
+}
+
+/* Contact Box Styles */
+.contact-box {
+    background-color: #222;
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.contact-box:hover {
+    transform: translateY(-10px);
+}
+
+.contact-box h4 {
+    color: #f36100;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+.contact-box .position {
+    font-size: 16px;
+    color: #a9a9a9;
+    margin-top: 8px;
+}
+
+.contact-box .address {
+    font-size: 14px;
+    color: #a9a9a9;
+    margin-top: 15px;
+}
+
+.contact-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Contact Me Button */
+.primary-btn {
+    display: inline-block;
+    font-size: 14px;
+    padding: 17px 30px 16px;
+    color: #ffffff;
+    background: #f36100;
+    line-height: normal;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-top: 30px;
+}
+
+.primary-btn.btn-normal {
+    transition: all 0.3s;
+}
+
+.primary-btn.btn-normal:hover {
+    background: #e65c00;
+    border-color: #e65c00;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .contact-box {
+        margin-bottom: 20px;
+    }
+}

@@ -1,0 +1,41 @@
+/* About Us Section */
+.about-us-section {
+    background-color: #151515;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.about-us-content h3 {
+    color: #f36100;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.about-us-content p {
+    color: #a9a9a9;
+    font-size: 14px;
+}
+
+.about-us-content img {
+    border-radius: 8px;
+}
+
+.about-us-section .section-title {
+    margin-bottom: 45px;
+    text-align: center;
+}
+
+.about-us-section .section-title span {
+    font-size: 16px;
+    color: #f36100;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.about-us-section .section-title h2 {
+    color: #ffffff;
+    font-size: 32px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 8px;
+}

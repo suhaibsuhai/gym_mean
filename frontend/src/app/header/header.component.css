@@ -1,0 +1,46 @@
+/* Header Styles (header.css) */
+.main-header {
+    background-color: #000000;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.logo img {
+    max-width: 150px;
+    height: auto;
+}
+
+/* Navigation Bar Styles */
+.navbar {
+    margin-bottom: 0;
+}
+
+.navbar-toggler {
+    border-color: #121212;
+    background-color: #f36100;
+}
+
+.navbar-toggler-icon {
+    background-color: #ffffff;
+}
+
+.navbar-nav .nav-link {
+    color: #ffffff;
+    margin: 0 15px;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #cccccc;
+}
+
+/* Social Media Styles */
+.to-social a {
+    margin: 0 10px;
+    color: #f9f8f8;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.to-social a:hover {
+    color: #007bff;
+}

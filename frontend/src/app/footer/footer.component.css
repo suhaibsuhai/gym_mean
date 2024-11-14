@@ -1,0 +1,41 @@
+/* Footer Styles (footer.css) */
+.footer-section {
+    background: #0a0a0a;
+    padding-top: 70px;
+}
+
+.fs-widget ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.fs-widget ul li {
+    width: 30%;
+    margin-bottom: 30px;
+}
+
+.fs-widget ul li h4 {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.fs-widget ul li a {
+    color: #a9a9a9;
+    font-size: 14px;
+}
+
+.fs-widget ul li a:hover {
+    color: #f36100;
+}
+
+.fs-social a {
+    margin-right: 10px;
+    color: #ffffff;
+    font-size: 18px;
+}
+
+.fs-social a:hover {
+    color: #f36100;
+}
